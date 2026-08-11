@@ -2,59 +2,301 @@
 
 {% block title %}Spendly — Track Every Rupee{% endblock %}
 
+{% block head %}
+<style>
+.hero {
+    padding: 5rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.hero-inner {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    margin-bottom: 2rem;
+}
+
+.hero-badge::before {
+    content: '●';
+    font-size: 0.6rem;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.75rem, 6vw, 4rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+}
+
+.hero-title-black {
+    display: block;
+    color: var(--ink);
+}
+
+.hero-title-green {
+    display: block;
+    color: var(--accent);
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: var(--ink-muted);
+    line-height: 1.8;
+    margin: 1.5rem 0 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.hero-actions .btn-ghost {
+    background: var(--ink) !important;
+    color: var(--paper) !important;
+    border: none !important;
+}
+
+.hero-actions .btn-ghost:hover {
+    background: var(--accent) !important;
+    color: var(--paper) !important;
+}
+
+.hero-visual {
+    width: 100%;
+    max-width: 950px;
+}
+
+.mock-card {
+    background: #f5f3f0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.mock-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.mock-dots {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.mock-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+.mock-dot-1 { background: #ef5350; }
+.mock-dot-2 { background: #ffa726; }
+.mock-dot-3 { background: #26c6da; }
+
+.mock-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.mock-stat-card {
+    background: var(--paper-card);
+    border: 1px solid #e8e6e1;
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.mock-stat-label {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+}
+
+.mock-stat-value {
+    font-family: var(--font-display);
+    font-size: 1.85rem;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.mock-stat-meta {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+}
+
+.mock-stat-meta.positive {
+    color: #ef5350;
+}
+
+.mock-stat-meta.positive-green {
+    color: var(--accent);
+}
+
+.mock-bars-section {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.mock-bar-row {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.mock-cat {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+}
+
+.mock-bar-track {
+    height: 10px;
+    background: #e8e6e1;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.mock-bar {
+    height: 100%;
+    border-radius: 999px;
+    display: block;
+}
+
+.mock-bar-orange { background: #ffa726; }
+.mock-bar-blue { background: #2196f3; }
+.mock-bar-purple { background: #9c27b0; }
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 3rem 1rem 2rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .hero-actions a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mock-card {
+        padding: 1.5rem;
+    }
+
+    .mock-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .mock-bar-row {
+        grid-template-columns: 60px 1fr;
+        gap: 0.75rem;
+    }
+}
+</style>
+{% endblock %}
+
 {% block content %}
 
 <section class="hero">
     <div class="hero-inner">
-        <div class="hero-badge">Personal Finance Tracker</div>
+        <div class="hero-badge">Free to use · No credit card needed</div>
         <h1 class="hero-title">
-            Know where your<br>
-            <em>money goes</em>
+            <span class="hero-title-black">Track every rupee.</span>
+            <span class="hero-title-green">Know where it goes.</span>
         </h1>
         <p class="hero-subtitle">
-            Log expenses, understand your spending patterns,
-            and take control of your financial life —
-            one transaction at a time.
+            Spendly helps you log expenses, spot patterns, and stay
+            on budget — without the spreadsheet headache.
         </p>
         <div class="hero-actions">
-            <a href="{{ url_for('register') }}" class="btn-primary">Start tracking free</a>
-            <a href="{{ url_for('login') }}" class="btn-ghost">Sign in</a>
+            <a href="{{ url_for('register') }}" class="btn-primary">Create free account</a>
+            <a href="{{ url_for('register') }}" class="btn-ghost">See how it works</a>
         </div>
     </div>
     <div class="hero-visual">
         <div class="mock-card">
             <div class="mock-card-header">
-                <span class="mock-label">March 2026</span>
-                <span class="mock-total">₹12,450</span>
-            </div>
-            <div class="mock-bars">
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Bills</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar" style="width: 72%"></div>
-                    </div>
-                    <span class="mock-amt">₹4,500</span>
+                <div class="mock-dots">
+                    <div class="mock-dot mock-dot-1"></div>
+                    <div class="mock-dot mock-dot-2"></div>
+                    <div class="mock-dot mock-dot-3"></div>
                 </div>
+            </div>
+            <div class="mock-stats">
+                <div class="mock-stat-card">
+                    <div class="mock-stat-label">This month</div>
+                    <div class="mock-stat-value">₹18,240</div>
+                    <div class="mock-stat-meta positive">+12% vs last</div>
+                </div>
+                <div class="mock-stat-card">
+                    <div class="mock-stat-label">Budget left</div>
+                    <div class="mock-stat-value">₹6,760</div>
+                    <div class="mock-stat-meta positive-green">43% remaining</div>
+                </div>
+                <div class="mock-stat-card">
+                    <div class="mock-stat-label">Transactions</div>
+                    <div class="mock-stat-value">34</div>
+                    <div class="mock-stat-meta">this month</div>
+                </div>
+            </div>
+            <div class="mock-bars-section">
                 <div class="mock-bar-row">
                     <span class="mock-cat">Food</span>
                     <div class="mock-bar-track">
-                        <div class="mock-bar mock-bar-2" style="width: 52%"></div>
+                        <div class="mock-bar mock-bar-orange" style="width: 72%"></div>
                     </div>
-                    <span class="mock-amt">₹3,200</span>
                 </div>
                 <div class="mock-bar-row">
-                    <span class="mock-cat">Health</span>
+                    <span class="mock-cat">Travel</span>
                     <div class="mock-bar-track">
-                        <div class="mock-bar mock-bar-3" style="width: 33%"></div>
+                        <div class="mock-bar mock-bar-blue" style="width: 56%"></div>
                     </div>
-                    <span class="mock-amt">₹2,050</span>
                 </div>
                 <div class="mock-bar-row">
-                    <span class="mock-cat">Transport</span>
+                    <span class="mock-cat">Bills</span>
                     <div class="mock-bar-track">
-                        <div class="mock-bar mock-bar-4" style="width: 28%"></div>
+                        <div class="mock-bar mock-bar-purple" style="width: 48%"></div>
                     </div>
-                    <span class="mock-amt">₹1,800</span>
                 </div>
             </div>
         </div>

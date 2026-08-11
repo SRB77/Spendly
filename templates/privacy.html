@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy — Spendly{% endblock %}
+
+{% block head %}
+<style>
+.privacy-hero {
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.privacy-badge {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 0.75rem;
+}
+
+.privacy-meta {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    margin-bottom: 2rem;
+}
+
+.privacy-content {
+    padding: 3rem 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.privacy-section {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-section h2 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--accent-light);
+}
+
+.privacy-section p {
+    color: var(--ink-muted);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+}
+
+.privacy-section ul {
+    color: var(--ink-muted);
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.privacy-section li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .privacy-hero {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .privacy-title {
+        font-size: 1.75rem;
+    }
+
+    .privacy-content {
+        padding: 2rem 1rem;
+    }
+
+    .privacy-section {
+        padding: 1.5rem;
+    }
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<section class="privacy-hero">
+    <div class="privacy-badge">Your Privacy Matters</div>
+    <h1 class="privacy-title">Privacy Policy</h1>
+    <p class="privacy-meta">Last updated: August 11, 2026</p>
+</section>
+
+<section class="privacy-content">
+    <div class="privacy-section">
+        <h2>1. Introduction</h2>
+        <p>
+            At Spendly, we are committed to protecting your privacy and ensuring you have a positive experience on our platform.
+            This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website
+            and use our expense tracking application.
+        </p>
+    </div>
+
+    <div class="privacy-section">
+        <h2>2. Data We Collect</h2>
+        <p>We collect information you provide directly to us, including:</p>
+        <ul>
+            <li><strong>Account Information:</strong> Name, email address, password, and phone number</li>
+            <li><strong>Expense Data:</strong> Transaction amounts, dates, categories, descriptions, and merchant details</li>
+            <li><strong>Profile Information:</strong> Currency preferences, notification settings, and personal preferences</li>
+            <li><strong>Usage Data:</strong> Pages visited, features used, and interaction patterns (collected via cookies)</li>
+            <li><strong>Device Information:</strong> IP address, browser type, device type, and operating system</li>
+        </ul>
+    </div>
+
+    <div class="privacy-section">
+        <h2>3. How We Use Your Data</h2>
+        <p>We use the information we collect to:</p>
+        <ul>
+            <li>Provide, maintain, and improve our services</li>
+            <li>Process your expense entries and generate financial insights</li>
+            <li>Authenticate your account and ensure security</li>
+            <li>Send you service-related notifications and updates</li>
+            <li>Respond to your inquiries and provide customer support</li>
+            <li>Analyze usage patterns to enhance user experience</li>
+            <li>Comply with legal obligations and regulations</li>
+            <li>Detect and prevent fraudulent activity</li>
+        </ul>
+    </div>
+
+    <div class="privacy-section">
+        <h2>4. Data Storage and Security</h2>
+        <p>
+            Your data is stored on secure, encrypted servers with restricted access. We implement industry-standard security measures
+            including SSL/TLS encryption, regular security audits, and secure authentication protocols to protect your information
+            from unauthorized access, alteration, or destruction.
+        </p>
+        <p>
+            All sensitive information, including expense data and personal details, are encrypted both in transit and at rest.
+            We do not store passwords in plain text and use industry-standard hashing algorithms for password storage.
+        </p>
+    </div>
+
+    <div class="privacy-section">
+        <h2>5. Third Party Services</h2>
+        <p>
+            We may use third-party services for specific functions, including:
+        </p>
+        <ul>
+            <li><strong>Payment Processing:</strong> To securely handle any payments (if applicable)</li>
+            <li><strong>Analytics:</strong> To understand how users interact with our platform</li>
+            <li><strong>Cloud Infrastructure:</strong> To host and maintain our servers</li>
+            <li><strong>Email Services:</strong> To send notifications and communications</li>
+        </ul>
+        <p>
+            These third parties are contractually obligated to maintain the confidentiality and security of your data
+            and are prohibited from using it for any purpose other than providing the services we request.
+        </p>
+    </div>
+
+    <div class="privacy-section">
+        <h2>6. Your Rights and Choices</h2>
+        <p>
+            You have the right to access, update, or delete your personal information at any time. You can manage your
+            account settings, download your data, or request complete account deletion by visiting your profile settings
+            or contacting our support team.
+        </p>
+        <p>
+            You can opt out of non-essential communications at any time through your notification preferences, though we
+            may still send service-related notifications necessary for account management.
+        </p>
+    </div>
+
+    <div class="privacy-section">
+        <h2>7. Cookies and Tracking</h2>
+        <p>
+            Spendly uses cookies to enhance your user experience, including session cookies for authentication and
+            analytics cookies to understand usage patterns. You can control cookie settings through your browser preferences,
+            though disabling cookies may limit certain features of the application.
+        </p>
+    </div>
+
+    <div class="privacy-section">
+        <h2>8. Data Retention</h2>
+        <p>
+            We retain your data for as long as necessary to provide our services and fulfill the purposes outlined in this
+            policy. When you delete your account, all personal data associated with it is permanently removed from our systems
+            within 30 days, except where legally required to retain it.
+        </p>
+    </div>
+
+    <div class="privacy-section">
+        <h2>9. Changes to This Privacy Policy</h2>
+        <p>
+            We may update this Privacy Policy periodically to reflect changes in our practices or for other operational, legal,
+            or regulatory reasons. We will notify you of any material changes via email or by posting a notice on our website.
+            Your continued use of Spendly following the posting of revised Privacy Policy means you accept and agree to the changes.
+        </p>
+    </div>
+
+    <div class="privacy-section">
+        <h2>10. Contact Us</h2>
+        <p>
+            If you have questions about this Privacy Policy or our privacy practices, please contact us at privacy@spendly.app
+            or mail us at our registered address. We will respond to your inquiry within 15 business days.
+        </p>
+    </div>
+</section>
+
+{% endblock %}
